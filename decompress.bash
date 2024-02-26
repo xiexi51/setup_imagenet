@@ -53,5 +53,21 @@ else
     echo "File ${VAL_TAR_FILE} not found, skipping..."
 fi
 
-echo "All done."
+# Prompt to delete test_images.tar.gz
+TEST_TAR_FILE="${BASE_DIR}/test_images.tar.gz"
+if [ -f "${TEST_TAR_FILE}" ]; then
+    echo "Do you want to delete ${TEST_TAR_FILE}? (yes/no)"
+    read -r user_response
 
+    if [ "$user_response" = "yes" ]; then
+        echo "Deleting ${TEST_TAR_FILE}..."
+        rm "${TEST_TAR_FILE}"
+        echo "${TEST_TAR_FILE} deleted."
+    else
+        echo "Skipping deletion of ${TEST_TAR_FILE}."
+    fi
+else
+    echo "File ${TEST_TAR_FILE} not found, no deletion needed."
+fi
+
+echo "All done."
