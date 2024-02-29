@@ -1,0 +1,1 @@
+imagenet_root = "/home/aiscuser/setup_imagenet/ILSVRC/Data/CLS-LOC"
