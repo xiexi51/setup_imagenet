@@ -40,39 +40,8 @@ Follow the detailed guide on [Using the ImageNet Dataset with PyTorch](https://t
 
 ### Steps:
 
-1. **Install Kaggle API**
+1. **Just do**
 
    ```bash
-   pip install kaggle
-   ```
-
-2. **Set Up Kaggle API Token**
-
-   Place your `kaggle.json` API token in the `~/.kaggle/` directory.
-
-   ```bash
-   mkdir ~/.kaggle
-   cp path/to/kaggle.json ~/.kaggle/kaggle.json
-   chmod 600 ~/.kaggle/kaggle.json
-   ```
-
-3. **Download the ImageNet Dataset**
-
-   ```bash
-   kaggle competitions download -c imagenet-object-localization-challenge
-   ```
-
-4. **Unzip the Dataset**
-
-   ```bash
-   unzip imagenet-object-localization-challenge.zip
-   ```
-
-5. **Download `ILSVRC2012_val_labels.json` and Process Validation Images**
-
-   Download the validation labels and run the provided Python script to categorize the validation images.
-
-   ```bash
-   wget https://gist.githubusercontent.com/paulgavrikov/3af1efe6f3dff63f47d48b91bb1bca6b/raw/00bad6903b5e4f84c7796b982b72e2e617e5fde1/ILSVRC2012_val_labels.json
-   python process_kaggle_val.py
+   bash setup_kaggle.bash
    ```
