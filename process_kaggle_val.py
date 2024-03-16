@@ -7,7 +7,7 @@ with open('ILSVRC2012_val_labels.json') as f:
     labels = json.load(f)
 
 # Directory containing the validation images
-val_dir = './val'
+val_dir = './ILSVRC/Data/CLS-LOC/val'
 
 # Iterate over the labels and move each file to its corresponding category directory
 for filename, category in labels.items():
