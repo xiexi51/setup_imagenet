@@ -1,4 +1,5 @@
 pip install timm
+pip install setproctitle
 git config --global credential.helper store
 cd ..
 git clone https://github.com/harveyp123/HE_transfer_learning.git
