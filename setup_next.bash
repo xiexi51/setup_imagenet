@@ -3,6 +3,8 @@ pip install setproctitle
 
 mkdir -p ~/.ssh
 cat ./ssh_azure.pub >> ~/.ssh/authorized_keys
+mv ~/.ssh/id_rsa.pub ~/.ssh/___id_rsa.pub
+cp ./ssh_azure.pub ~/.ssh/id_rsa.pub
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 mv ~/.ssh/id_rsa ~/.ssh/___id_rsa
