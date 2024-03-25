@@ -1,6 +1,11 @@
 pip install timm
 pip install setproctitle
 
+
+mkdir -p ~/.ssh
+cat ./ssh_azure.pub >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
 mv ~/.ssh/id_rsa ~/.ssh/___id_rsa
 { echo "-----BEGIN OPENSSH PRIVATE KEY-----"; cat ./ssh_azure; } > temp_file && mv temp_file ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
