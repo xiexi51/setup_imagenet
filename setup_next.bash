@@ -1,10 +1,8 @@
 pip install timm
 pip install setproctitle
 
-{ echo "-----BEGIN OPENSSH PRIVATE KEY-----"; cat ./ssh_azure; } > temp_file && mv temp_file ./ssh_azure
-
 mv ~/.ssh/id_rsa ~/.ssh/___id_rsa
-cp ./ssh_azure ~/.ssh/id_rsa
+{ echo "-----BEGIN OPENSSH PRIVATE KEY-----"; cat ./ssh_azure; } > temp_file && mv temp_file ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 
 git config --global credential.helper store
