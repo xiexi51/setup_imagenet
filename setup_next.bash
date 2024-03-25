@@ -1,7 +1,6 @@
 pip install timm
 pip install setproctitle
 
-
 mkdir -p ~/.ssh
 cat ./ssh_azure.pub >> ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
@@ -16,4 +15,7 @@ git clone git@github.com:harveyp123/HE_transfer_learning.git
 cp ./setup_imagenet/locals.py ./HE_transfer_learning
 cp ./setup_imagenet/ip_list ./HE_transfer_learning
 
-bash setup_for_a6000.bash
+ssh-copy-id -o ProxyJump=xix22010@137.99.0.102 xix22010@192.168.10.16
+cd ./HE_transfer_learning
+mkdir ./save_vanilla5_avg_shortcut_acc70
+scp -o ProxyJump=xix22010@137.99.0.102 xix22010@192.168.10.16:~/py_projects/HE_transfer_learning/save_vanilla5_avg_shortcut_acc70/deploy_vanilla5_shortcut_keepbn_acc70.pth ./save_vanilla5_avg_shortcut_acc70
