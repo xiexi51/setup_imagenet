@@ -7,4 +7,4 @@ echo "unzip..."
 unzip -qq imagenet-object-localization-challenge.zip
 echo "unzip finish"
 python process_kaggle_val.py
-bash setup_next.bash
+# bash setup_next.bash
